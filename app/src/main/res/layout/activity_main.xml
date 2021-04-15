@@ -6,51 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
         android:id="@+id/editTextNazwaZapisz"
-        android:layout_width="274dp"
-        android:layout_height="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerNazwaCzytaj"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
         app:layout_constraintEnd_toStartOf="@+id/przyciskZapisz"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/przyciskZapisz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Zapisz"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="4dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerNazwaCzytaj"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#5D9839"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNotatka"
+        app:layout_constraintEnd_toStartOf="@+id/przyciskCzytaj"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNazwaZapisz" />
 
     <Button
         android:id="@+id/przyciskCzytaj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Czytaj"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Wczytaj"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="70dp" />
-
-    <Spinner
-        android:id="@+id/spinnerNazwaCzytaj"
-        android:layout_width="272dp"
-        android:layout_height="34dp"
-        android:layout_marginBottom="52dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNotatka"
-        app:layout_constraintEnd_toStartOf="@+id/przyciskCzytaj"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/przyciskZapisz" />
 
     <EditText
         android:id="@+id/editTextNotatka"
-        android:layout_width="363dp"
-        android:layout_height="554dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:background="#EFE697"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/przyciskCzytaj" />
 </androidx.constraintlayout.widget.ConstraintLayout>
